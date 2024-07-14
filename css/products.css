@@ -1,0 +1,55 @@
+#products h1 {
+    margin: 0;
+    padding: 0;
+    position:relative;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    color: #303919;
+    font-size: 30px;
+    margin: 100px 0px;
+
+}
+#products h1::before {
+    content: "green fruits and vegetables";
+    position: absolute;
+    color: #76A65B;
+    top: 0;
+    left: 0;
+    width: 0%;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+#products h1:hover::before {
+    width: 100%;
+}
+.card-img-top {
+    width: 100%;
+    height: 290px;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 27%;
+   
+}
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.card-body .btn {
+    /* border: 2px solid #303919; */
+    border: 2px solid #76A65B;
+    /* border: 2px solid #5cb874; */
+    color: #303919;
+    border-radius: 15px;
+    margin: 0 auto;
+}
+.card-body .btn:hover {
+    background-color: #76A65B;
+    color: #ffffff;
+    /* background-color: #80c792; */
+}
+.card-text {
+    text-align: justify;
+}
+

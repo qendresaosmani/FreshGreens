@@ -1,0 +1,27 @@
+.text-reset {
+    text-decoration: none;
+}
+
+footer {
+    background-color: #303919;
+    color: #ffffff;
+    margin-top: 500px;
+}
+
+/* h6::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    bottom: -10px;
+    background-color: #76A65B;
+    box-sizing: border-box;
+} */
+
+footer p a:hover {
+    color: #76A65B;
+    padding-left: 10px;
+    transition: all 0.3s ease;
+
+}

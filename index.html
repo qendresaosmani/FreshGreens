@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+  <title>Green Fruits and Vegetables</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/0fcaa0e277.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/footer.css">
+
+</head>
+
+<body>
+<nav class="navbar navbar-expand-md navbar-light bg-light px-5" aria-label="Green Fruits and Vegetables Navbar">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">Green Fruits and Vegetables</a>
+    <!-- <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+          <img src="./images/logo.png" class="bi me-2" width="40" height="42" role="img" aria-label="Bootstrap">
+        </a> -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+      aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav mx-auto mb-2 mb-sm-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./pages/products.html">Products</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Shop
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="./pages/shop.html">Shop</a></li>
+            <li><a class="dropdown-item" href="./pages/wishlist.html">Wishlist</a></li>
+            <li><a class="dropdown-item" href="#">Single Product</a></li>
+            <li><a class="dropdown-item" href="#">Cart</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" id="blogs-link">Blogs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+      </ul>
+      <div class="d-flex">
+        <button type="button" class="btn me-2">Login</button>
+        <button type="button" class="btn">Sign-up</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+      aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+      aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+      aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="./images/top-view-green-fruits-vegetables.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <!-- <h4>POWERFUL NUTRITION</h4>
+                <p>Green fruits and vegetables are full of powerful nutrition.</p> -->
+        <h3 class="text-uppercase">100% fresh and organic foods</h3>
+        <p>We deliver organic vegetables and fruits.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="./images/carousel2.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block text-secondary">
+        <h3>Get your daily dose of fruits and vegetables</h3>
+        <p>You should eat up to nine servings of vegetables and fruits each day.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="./images/carousel1.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h3>The green color in fruits and vegetables</h3>
+        <p>The green color in fruits and vegetables is known as <b>chlorophyll</b>.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+<section class="ftco-section">
+  <div class="container">
+    <div class="row no-gutters ftco-services">
+      <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
+        <div class="media block-6 services mb-md-0 mb-4">
+          <div class="icon bg-color-1 active d-flex justify-content-center align-items-center mb-2">
+            <span class="flaticon-shipped"></span>
+          </div>
+          <div class="media-body">
+            <h3 class="heading">Free Shipping</h3>
+            <span>On order over $50</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
+        <div class="media block-6 services mb-md-0 mb-4">
+          <div class="icon bg-color-2 d-flex justify-content-center align-items-center mb-2">
+            <span class="flaticon-fresh"></span>
+          </div>
+          <div class="media-body">
+            <h3 class="heading">Always Fresh</h3>
+            <span>Well packaged produtcs</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
+        <div class="media block-6 services mb-md-0 mb-4">
+          <div class="icon bg-color-3 d-flex justify-content-center align-items-center mb-2">
+            <span class="flaticon-quality"></span>
+          </div>
+          <div class="media-body">
+            <h3 class="heading">Superior Quality</h3>
+            <span>Quality Products</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
+        <div class="media block-6 services mb-md-0 mb-4">
+          <div class="icon bg-color-4 d-flex justify-content-center align-items-center mb-2">
+            <span class="flaticon-support"></span>
+          </div>
+          <div class="media-body">
+            <h3 class="heading">Support</h3>
+            <span>24/7 Support</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about-us" class="hidden">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xl-12 col-sm-12 text-center">
+        <div class="section-title">
+          <h2>About Us</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row about-us-row">
+      <div class="col-xl-12 col-md-12 col-sm-12 text-center about-us-col">
+        <h4 class="text-uppercase">We sell fresh fruits and vegetables</h4>
+        <h6 class="text-muted upp">Best Organic Fruits And Vegetables</h6>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos illum fugit dolores exercitationem, eos eligendi reiciendis iure similique ullam id ipsam, quod modi cupiditate. Quidem, veniam. Cum porro fugiat repudiandae.</p>
+        <button class="btn">Learn More</button>
+      </div>
+      <!-- <div class="col-xl-6 col-md-6 col-sm-12">
+
+      </div> -->
+
+    </div>
+  </div>
+</section>
+
+<!--Featured Products-->
+<section id="featured_products" class="mt-5 pt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-12 col-sm-12 text-center">
+        <div class="section-title">
+          <h2>Featured Products</h2>
+        </div>
+        <div class="featured_controls">
+          <ul>
+            <li class="active" data-filter="all">All</li>
+            <li data-filter="fruits">Fruits</li>
+            <li data-filter="vegetables">Vegetables</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row featured_items hidden">
+      <div class="col-lg-3 col-md-4 col-sm-6 item fruits">
+        <div class="featured-item">
+          <div class="img-container">
+            <img src="./images/avocado.png" alt="" width="100%" height="300px">
+            <ul class="featured_item_pic_hover">
+              <li><a href="#"><i class="fa fa-heart"></i></a></li>
+              <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+              <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="featured_item_text">
+          <h6><a href="#">Avocado</a></h6>
+          <h5>€<del>6.99</del> €5.99</h5>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 item fruits">
+        <div class="featured-item">
+          <div class="img-container">
+            <img src="./images/lime.png" alt="" width="100%" height="300px">
+            <ul class="featured_item_pic_hover">
+              <li><a href="#"><i class="fa fa-heart"></i></a></li>
+              <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+              <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="featured_item_text">
+          <h6><a href="#">Lime</a></h6>
+          <h5>€<del>12.99</del> €9.99</h5>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 item vegetables">
+        <div class="featured-item">
+          <div class="img-container">
+            <img src="./images/mint.png" alt="" width="100%" height="300px">
+            <ul class="featured_item_pic_hover">
+              <li><a href="#"><i class="fa fa-heart"></i></a></li>
+              <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+              <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="featured_item_text">
+          <h6><a href="#">Mint</a></h6>
+          <h5>€<del>15.99</del> €14.99</h5>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 item vegetables">
+        <div class="featured-item">
+          <div class="img-container">
+            <img src="./images/broccoli.png" alt="" width="100%" height="300px">
+            <ul class="featured_item_pic_hover">
+              <li><a href="#"><i class="fa fa-heart"></i></a></li>
+              <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+              <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="featured_item_text">
+          <h6><a href="#">Broccoli</a></h6>
+          <h5>€<del>4.99</del> €4.00</h5>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 item fruits">
+        <div class="featured-item">
+          <div class="img-container">
+            <img src="./images/peas.png" alt="" width="100%" height="300px">
+            <ul class="featured_item_pic_hover">
+              <li><a href="#"><i class="fa fa-heart"></i></a></li>
+              <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+              <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="featured_item_text">
+          <h6><a href="#">Peas</a></h6>
+          <h5>€<del>5.99</del> €5.00</h5>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 item fruits">
+        <div class="featured-item">
+          <div class="img-container">
+            <img src="./images/cucumber.png" alt="" width="100%" height="300px">
+            <ul class="featured_item_pic_hover">
+              <li><a href="#"><i class="fa fa-heart"></i></a></li>
+              <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+              <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="featured_item_text">
+          <h6><a href="#">Cucumber</a></h6>
+          <h5>€<del>2.99</del> €1.99</h5>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 item vegetables">
+        <div class="featured-item">
+          <div class="img-container">
+            <img src="./images/lettuce.png" alt="" width="100%" height="300px">
+            <ul class="featured_item_pic_hover">
+              <li><a href="#"><i class="fa fa-heart"></i></a></li>
+              <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+              <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="featured_item_text">
+          <h6><a href="#">Lettuce</a></h6>
+          <h5>€<del>1.50</del> €1.00</h5>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 item vegetables">
+        <div class="featured-item">
+          <div class="img-container">
+            <img src="./images/pepper.webp" alt="" width="100%" height="290px">
+            <ul class="featured_item_pic_hover">
+              <li><a href="#"><i class="fa fa-heart"></i></a></li>
+              <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+              <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="featured_item_text">
+          <h6><a href="#">Bell Pepper</a></h6>
+          <h5>€<del>3.99</del> €2.99</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--Blog Section-->
+<section id="blogs" class="mt-5 section" >
+<!-- <section id="blogs" class="mt-5 section section--hidden"> -->
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-12 col-sm-12 text-center">
+        <div class="section-title hidden">
+          <h2>Related Blogs</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xl-4 col-md-4 col-sm-12">
+        <div class="blog_item hidden">
+          <div class="blog_pic">
+              <img class="img-fluid" src="./images/blog1.jpg" alt="" width="370px" height="266px">
+          </div>
+          <div class="blog_text">
+              <ul>
+                  <li><i class="fa fa-calendar-o"></i> May 4,2019</li>
+                  <li><i class="fa fa-comment-o"></i> 5</li>
+              </ul>
+              <h5><a href="https://foodcrumbles.com/colours-in-fruits-vegetables/" class="text-decoration-none">How Do Green Fruits Get Their Colour?</a></h5>
+              <p>Want to control the color of your fruits and vegetables? Then we’d better introduce you to chlorophyll. </p>
+          </div>
+      </div>
+      </div>
+      <div class="col-xl-4 col-md-4 col-sm-12">
+        <div class="blog_item hidden">
+          <div class="blog_pic">
+              <img class="img-fluid"  src="./images/blog2.jpg" alt="" width="370px" height="266px">
+          </div>
+          <div class="blog_text">
+              <ul>
+                  <li><i class="fa fa-calendar-o"></i> May 4,2019</li>
+                  <li><i class="fa fa-comment-o"></i> 5</li>
+              </ul>
+              <h5><a href="https://www.100daysofrealfood.com/green-smoothie-recipe/" class="text-decoration-none">How to Make a Perfect Green Smoothie</a></h5>
+              <p>There are so many ways to make a delicious (and healthy!) green smoothie recipe.</p>
+          </div>
+      </div>
+    </div>
+      <div class="col-xl-4 col-md-4 col-sm-12">
+        <div class="blog_item hidden">
+          <div class="blog_pic">
+              <img class="img-fluid"  src="./images/blog3.jpg" alt="" width="370px" height="266px">
+          </div>
+          <div class="blog_text">
+              <ul>
+                  <li><i class="fa fa-calendar-o"></i> May 4,2019</li>
+                  <li><i class="fa fa-comment-o"></i> 5</li>
+              </ul>
+              <h5><a href="https://www.betterhealth.vic.gov.au/health/healthyliving/fruit-and-vegetables" class="text-decoration-none">Healthy Life</a></h5>
+              <p>A diet high in fruit and vegetables can help protect you against cancer, diabetes and heart disease.</p>
+          </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-body-tertiary">
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <div class="me-5 d-none d-lg-block">
+      <span>Get connected with us on social networks:</span>
+    </div>
+
+    <div>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-google"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <div class="row mt-3">
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3"></i>Green Fruits and Vegetables
+          </h6>
+          <p>
+            Here you can use rows and columns to organize your footer content. Lorem ipsum
+            dolor sit amet, consectetur adipisicing elit.
+          </p>
+        </div>
+
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <h6 class="text-uppercase fw-bold mb-4">
+            Products
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Angular</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">React</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Vue</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Laravel</a>
+          </p>
+        </div>
+
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <h6 class="text-uppercase fw-bold mb-4">Online Shop</h6>
+          <p>
+            <a href="#!" class="text-reset">Article 1</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Article 2</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Article 3</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Article 4</a>
+          </p>
+        </div>
+
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+          <p><i class="fas fa-home me-3"></i>Prishtinë</p>
+          <p><i class="fas fa-envelope me-3"></i>qendresa.osmani17@outlook.com</p>
+          <p><i class="fas fa-phone me-3"></i>+383 49 187 338</p>
+          <p><i class="fas fa-print me-3"></i>+383 49 187 338</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2021 Copyright:
+    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+  </div>
+</footer>
+  <!-- Footer -->
+
+  <script src="./js/smoothScroll.js"></script>
+  <script src="./js/revealOnScroll.js"></script>
+  <script src="./js/showProducts.js"></script>
+
+</body>
+
+</html>

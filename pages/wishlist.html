@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
+    <title>Products</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/0fcaa0e277.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/wishlist.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light px-5" aria-label="Green Fruits and Vegetables Navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">Green Fruits and Vegetables</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-sm-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Products</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Shop
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="shop.html">Shop</a></li>
+                            <li><a class="dropdown-item active" href="wishlist.html" aria-current="page">Wishlist</a></li>
+                            <li><a class="dropdown-item" href="#">Single Product</a></li>
+                            <li><a class="dropdown-item" href="#">Cart</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="blogs-link">Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <button type="button" class="btn me-2">Login</button>
+                    <button type="button" class="btn ">Sign-up</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="wishlist" class="p-5 m-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 col-sm-12 text-center">
+                    <div class="section-title">
+                        <h2>Wishlist</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row hidden">
+                <div class="col" style="overflow-x: auto;">
+                    <table class="text-center">
+                        <thead class="collapsing border-3">
+                            <tr class="text-center">
+                                <th colspan="3">Product List</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody id="wishlist-table-body">
+                            <!-- <tr>
+                                <td><a href="#">X</a></td>
+                                <td><img src="../images/apple.png" alt="" height="60px" width="60px"></td>
+                                <td>
+                                    <h6>Bell Pepper</h6>
+                                    <p>Far far away, behind the word mountains, far from the countries</p>
+                                </td>
+                                <td>$4.90</td>
+                                <td><input type="number" name="number" id="number"></td>
+                                <td>$4.90</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">X</a></td>
+                                <td><img src="../images/avocado.png" alt="" height="60px" width="60px"></td>
+                                <td>
+                                    <h6>Avocado</h6>
+                                    <p>Far far away, behind the word mountains, far from the countries</p>
+                                </td>
+                                <td>$4.90</td>
+                                <td><input type="number" name="number" id="number"></td>
+                                <td>$4.90</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">X</a></td>
+                                <td><img src="../images/grape.png" alt="" height="60px" width="60px"></td>
+                                <td>
+                                    <h6>Grape</h6>
+                                    <p>Far far away, behind the word mountains, far from the countries</p>
+                                </td>
+                                <td>$4.90</td>
+                                <td><input type="number" name="number" id="number"></td>
+                                <td>$4.90</td>
+                            </tr> -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+            let tbody = document.getElementById('wishlist-table-body');
+
+            wishlist.forEach((item, index) => {
+                let row = document.createElement('tr');
+
+                
+                let cell1 = document.createElement('td');
+                cell1.innerHTML = `<a href="#" onclick="removeFromWishlist(${index})">X</a>`;
+                row.appendChild(cell1);
+
+                let cell2 = document.createElement('td');
+                cell2.innerHTML = `<img src="${item.image}" alt="${item.name}" height="60px" width="60px">`;
+                row.appendChild(cell2);
+
+                let cell3 = document.createElement('td');
+                cell3.innerHTML = `<h6>${item.name}</h6>`;
+                row.appendChild(cell3);
+
+                let cell4 = document.createElement('td');
+                cell4.textContent = `€${parseFloat(item.price).toFixed(2)}`;
+                row.appendChild(cell4);
+
+                let cell5 = document.createElement('td');
+                let input = document.createElement('input');
+                input.type = 'number';
+                input.value = 1;
+                input.min = 0;
+                input.addEventListener('input', function() {
+                    let quantity = parseInt(input.value);
+                    let total = quantity * parseFloat(item.price);
+                    cell5.textContent = `€${total.toFixed(2)}`;
+                });
+                cell5.appendChild(input);
+                row.appendChild(cell5);
+
+                let cell6 = document.createElement('td');
+                cell6.textContent = `€${parseFloat(item.price).toFixed(2)}`;
+                row.appendChild(cell6);
+
+
+                tbody.appendChild(row);
+            });
+        });
+
+        function removeFromWishlist(index) {
+            let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+            wishlist.splice(index, 1);
+            localStorage.setItem('wishlist', JSON.stringify(wishlist));
+            location.reload();
+        }
+    </script>
+
+
+
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-body-tertiary">
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <div class="me-5 d-none d-lg-block">
+      <span>Get connected with us on social networks:</span>
+    </div>
+
+    <div>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-google"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <div class="row mt-3">
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3"></i>Green Fruits and Vegetables</h6>
+          <p>
+            Here you can use rows and columns to organize your footer content. Lorem ipsum
+            dolor sit amet, consectetur adipisicing elit.
+          </p>
+        </div>
+
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <h6 class="text-uppercase fw-bold mb-4">
+            Products
+          </h6>
+            <p>
+              <a href="#!" class="text-reset">Angular</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">React</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Vue</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Laravel</a>
+            </p>
+        </div>
+
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <h6 class="text-uppercase fw-bold mb-4">Online Shop</h6>
+          <p>
+            <a href="#!" class="text-reset">Article 1</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Article 2</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Article 3</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Article 4</a>
+          </p>
+        </div>
+
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+          <p><i class="fas fa-home me-3"></i>Prishtinë</p>
+          <p><i class="fas fa-envelope me-3"></i>qendresa.osmani17@outlook.com</p>
+          <p><i class="fas fa-phone me-3"></i>+383 49 187 338</p>
+          <p><i class="fas fa-print me-3"></i>+383 49 187 338</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2021 Copyright:
+    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+  </div>
+</footer>
+<!-- Footer -->
+ <script src="../js/revealOnScroll.js"></script>
+ <!-- <script src="../js/addToWishlist.js"></script> -->
+    
+</body>
+</html>
