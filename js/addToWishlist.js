@@ -1,40 +1,62 @@
-function addToWishlist(link) {
-    // Retrieve product details from the data attributes
-    let name = link.parentNode.parentNode.querySelector('h6').textContent;
-    let price = parseFloat(link.parentNode.parentNode.querySelector('h5').textContent.replace('€', ''));
-    let image = link.parentNode.parentNode.parentNode.querySelector('img').src;
+document.addEventListener('DOMContentLoaded', function() {
+    let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+    let tbody = document.getElementById('wishlist-table-body');
 
-    // Create a new row for the wishlist table
-    let tbody = document.querySelector('#wishlist tbody');
-    let newRow = tbody.insertRow();
+    wishlist.forEach((item, index) => {
+        let row = document.createElement('tr');
 
-    // Insert cells into the new row
-    let cell1 = newRow.insertCell();
-    let cell2 = newRow.insertCell();
-    let cell3 = newRow.insertCell();
-    let cell4 = newRow.insertCell();
-    let cell5 = newRow.insertCell();
-    let cell6 = newRow.insertCell();
+        let cell1 = document.createElement('td');
+        cell1.innerHTML = `<a href="#" onclick="removeFromWishlist(${index})">X</a>`;
+        row.appendChild(cell1);
 
-    // Fill cells with data
-    cell1.innerHTML = '<a href="#" onclick="removeFromWishlist(this)">X</a>'; // Remove link
-    cell2.innerHTML = `<img src="${image}" alt="${name}" height="60px" width="60px">`; // Image
-    cell3.innerHTML = `<h6>${name}</h6>`; // Name
-    cell4.textContent = `€${price.toFixed(2)}`; // Price
-    cell5.innerHTML = '<input type="number" name="quantity" value="1" min="0" onchange="updateTotal(this)">'; // Quantity input
-    cell6.textContent = `€${price.toFixed(2)}`; // Total price
+        let cell2 = document.createElement('td');
+        cell2.innerHTML = `<img src="${item.image}" alt="${item.name}" height="60px" width="60px">`;
+        row.appendChild(cell2);
 
-    // Optionally, update total price when quantity changes
-    function updateTotal(input) {
-        let quantity = parseInt(input.value);
-        let price = parseFloat(input.parentNode.previousSibling.textContent.replace('€', ''));
-        let total = quantity * price;
-        input.parentNode.nextSibling.textContent = `€${total.toFixed(2)}`;
-    }
-}
+        let cell3 = document.createElement('td');
+        cell3.innerHTML = `<h6>${item.name}</h6>`;
+        row.appendChild(cell3);
 
-// Function to remove row from wishlist
-function removeFromWishlist(link) {
-    let row = link.parentNode.parentNode;
-    row.parentNode.removeChild(row);
+        let cell4 = document.createElement('td');
+        cell4.textContent = `€${parseFloat(item.price).toFixed(2)}`;
+        row.appendChild(cell4);
+
+        let cell5 = document.createElement('td');
+        let input = document.createElement('input');
+        input.type = 'number';
+        input.value = 1;
+        input.min = 1;
+        input.addEventListener('input', function() {
+            let quantity = parseInt(input.value);
+            let subtotal = quantity * parseFloat(item.price);
+            let vat = subtotal * 0.18;
+            let total = subtotal + vat;
+            cell6.textContent = `€${subtotal.toFixed(2)}`;
+            cell7.textContent = `€${vat.toFixed(2)}`;
+            cell8.textContent = `€${total.toFixed(2)}`;
+        });
+        cell5.appendChild(input);
+        row.appendChild(cell5);
+
+        let cell6 = document.createElement('td');
+        cell6.textContent = `€${parseFloat(item.price).toFixed(2)}`;
+        row.appendChild(cell6);
+
+        let cell7 = document.createElement('td');
+        cell7.textContent = `€${(parseFloat(item.price) * 0.18).toFixed(2)}`;
+        row.appendChild(cell7);
+
+        let cell8 = document.createElement('td');
+        cell8.textContent = `€${(parseFloat(item.price) * 1.18).toFixed(2)}`;
+        row.appendChild(cell8);
+
+        tbody.appendChild(row);
+    });
+});
+
+function removeFromWishlist(index) {
+    let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+    wishlist.splice(index, 1);
+    localStorage.setItem('wishlist', JSON.stringify(wishlist));
+    location.reload();
 }

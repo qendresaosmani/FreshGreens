@@ -38,7 +38,7 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item" href="shop.html">Shop</a></li>
                             <li><a class="dropdown-item active" href="wishlist.html" aria-current="page">Wishlist</a></li>
-                            <li><a class="dropdown-item" href="#">Single Product</a></li>
+                            <li><a class="dropdown-item" href="singleProduct.html">Single Product</a></li>
                             <li><a class="dropdown-item" href="#">Cart</a></li>
                         </ul>
                     </li>
@@ -74,104 +74,19 @@
                                 <th colspan="3">Product List</th>
                                 <th>Price</th>
                                 <th>Quantity</th>
+                                <th>Subtotal </th>
+                                <th>VAT 18%</th>
                                 <th>Total</th>
                             </tr>
                         </thead>
                         <tbody id="wishlist-table-body">
-                            <!-- <tr>
-                                <td><a href="#">X</a></td>
-                                <td><img src="../images/apple.png" alt="" height="60px" width="60px"></td>
-                                <td>
-                                    <h6>Bell Pepper</h6>
-                                    <p>Far far away, behind the word mountains, far from the countries</p>
-                                </td>
-                                <td>$4.90</td>
-                                <td><input type="number" name="number" id="number"></td>
-                                <td>$4.90</td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">X</a></td>
-                                <td><img src="../images/avocado.png" alt="" height="60px" width="60px"></td>
-                                <td>
-                                    <h6>Avocado</h6>
-                                    <p>Far far away, behind the word mountains, far from the countries</p>
-                                </td>
-                                <td>$4.90</td>
-                                <td><input type="number" name="number" id="number"></td>
-                                <td>$4.90</td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">X</a></td>
-                                <td><img src="../images/grape.png" alt="" height="60px" width="60px"></td>
-                                <td>
-                                    <h6>Grape</h6>
-                                    <p>Far far away, behind the word mountains, far from the countries</p>
-                                </td>
-                                <td>$4.90</td>
-                                <td><input type="number" name="number" id="number"></td>
-                                <td>$4.90</td>
-                            </tr> -->
+
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
     </section>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
-            let tbody = document.getElementById('wishlist-table-body');
-
-            wishlist.forEach((item, index) => {
-                let row = document.createElement('tr');
-
-                
-                let cell1 = document.createElement('td');
-                cell1.innerHTML = `<a href="#" onclick="removeFromWishlist(${index})">X</a>`;
-                row.appendChild(cell1);
-
-                let cell2 = document.createElement('td');
-                cell2.innerHTML = `<img src="${item.image}" alt="${item.name}" height="60px" width="60px">`;
-                row.appendChild(cell2);
-
-                let cell3 = document.createElement('td');
-                cell3.innerHTML = `<h6>${item.name}</h6>`;
-                row.appendChild(cell3);
-
-                let cell4 = document.createElement('td');
-                cell4.textContent = `€${parseFloat(item.price).toFixed(2)}`;
-                row.appendChild(cell4);
-
-                let cell5 = document.createElement('td');
-                let input = document.createElement('input');
-                input.type = 'number';
-                input.value = 1;
-                input.min = 0;
-                input.addEventListener('input', function() {
-                    let quantity = parseInt(input.value);
-                    let total = quantity * parseFloat(item.price);
-                    cell5.textContent = `€${total.toFixed(2)}`;
-                });
-                cell5.appendChild(input);
-                row.appendChild(cell5);
-
-                let cell6 = document.createElement('td');
-                cell6.textContent = `€${parseFloat(item.price).toFixed(2)}`;
-                row.appendChild(cell6);
-
-
-                tbody.appendChild(row);
-            });
-        });
-
-        function removeFromWishlist(index) {
-            let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
-            wishlist.splice(index, 1);
-            localStorage.setItem('wishlist', JSON.stringify(wishlist));
-            location.reload();
-        }
-    </script>
 
 
 
@@ -268,8 +183,10 @@
   </div>
 </footer>
 <!-- Footer -->
+
+<!--Scripts-->
  <script src="../js/revealOnScroll.js"></script>
- <!-- <script src="../js/addToWishlist.js"></script> -->
+ <script src="../js/addToWishlist.js"></script>
     
 </body>
 </html>

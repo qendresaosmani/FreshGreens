@@ -1,0 +1,12 @@
+ul li {
+    display: inline;
+}
+ul li:not(:last-child) {
+    margin-right: 15px;
+}
+ul {
+    margin-left: -32px;
+}
+i {
+    color: rgb(255, 149, 0);
+}
