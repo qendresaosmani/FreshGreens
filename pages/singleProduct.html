@@ -71,19 +71,57 @@
             </div>
             <div class="row">
                 <div class="col-xl-6 col-md-6 col-sm-12">
-                    <img class="img-thumbnail" src="../images/fruit1.jpg" alt="" height="700px" width="600px">
+                    <img id="productImage" class="img-thumbnail" src="../images/fruit1.jpg" alt="" height="700px" width="600px">
                 </div>
-                <div class="col-xl-6 col-md-6 col-sm-12">
-                    <h3>Avocado</h3>
-                    <ul>
+                <div class="col-xl-6 col-md-6 col-sm-12 pt-4">
+                    <h2 class="fw-bolder" id="productName"></h2>
+                    <h6 class="fw-bold">Category: Vegetables</h6>
+                    <ul class="pt-3 review">
                         <li>4.5 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></li>
                         <li>100 Rating</li>
                         <li>500 Sold</li>
                     </ul>
+                    <h1 id="productPrice">€ 0.00</h1>
+                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                      Deserunt tenetur dignissimos ipsa quaerat eligendi unde in 
+                      fugit temporibus assumenda excepturi rem facilis praesentium 
+                      veniam atque quasi, officiis, soluta aspernatur alias.
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                      Aliquam hic iure explicabo temporibus eos nobis vero modi dicta.
+                    </p>
+                    <select name="size" id="size">
+                      <option value="small">SMALL</option>
+                      <option value="medium">MEDIUM</option>
+                      <option value="large">LARGE</option>
+                      <option value="extraLarge">EXTRA LARGE</option>
+                    </select>
+                    <div class="number">
+                      <button class="btn btn-click" onclick="decrement()">-</button>
+                      <input type="text" class="number-input" id="number" value="1" readonly>
+                      <button class="btn btn-click" onclick="increment()">+</button>
+                    </div>
+                    <h6 class="pt-2">600 kg available</h6>
+                     <button class="btn-cart">Add to Cart</button>
+
                 </div>
             </div>
         </div>
     </section>
+
+    <script>
+      let numberInput = document.getElementById("number");
+
+      function decrement() {
+        let currentValue = parseInt(numberInput.value);
+        if (currentValue > 1)
+        numberInput.value = currentValue - 1;
+      }
+
+      function increment() {
+        let currentValue = parseInt(numberInput.value);
+        numberInput.value = currentValue + 1;
+      }
+    </script>
 
 <!-- Footer -->
 <footer class="text-center text-lg-start bg-body-tertiary">
@@ -179,6 +217,7 @@
 <!-- Footer -->
  <script src="../js/showProducts.js"></script>
  <script src="../js/revealOnScroll.js"></script>
+ <script src="../js/singleProduct.js"></script>
 
     
 </body>
