@@ -1,4 +1,4 @@
-input[type = "text"], input[type = "email"], input[type = "button"] {
+input[type = "text"], input[type = "email"], input[type = "submit"] {
     width: 100%;
     min-width: 50%;
     height: 56px;
@@ -27,7 +27,7 @@ textarea {
 }
 
 @media (max-width: 767px) {
-    input[type="text"], input[type="email"], input[type="button"], textarea {
+    input[type="text"], input[type="email"], input[type="submit"], textarea {
         width: calc(100% - 40px); /* Adjust width to account for the margins */
         margin: 0 10px 24px; /* Reduce side margins for smaller screens */
     }
