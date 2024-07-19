@@ -73,11 +73,11 @@
           <h3 class="text-center">Get in Touch</h3>
           <h6 class="text-center pb-5">Use the form below to get in touch with us</h6>
           <div class="col-xl-6 col-md-6 col-sm-12">
-            <form action="" method="post">
-              <input type="text" name="firstname" id="firstname" placeholder="First Name">
-              <input type="text" name="lastname" id="lastname" placeholder="Last Name">
-              <input type="email" name="email" id="email" placeholder="Enter Your Email">
-              <textarea name="message" id="message" placeholder="Your Message"></textarea>
+            <form action="contact.php" method="post">
+              <input type="text" name="firstname" id="firstname" placeholder="First Name" required>
+              <input type="text" name="lastname" id="lastname" placeholder="Last Name" required>
+              <input type="email" name="email" id="email" placeholder="Enter Your Email" required>
+              <textarea name="message" id="message" placeholder="Your Message" required></textarea>
               <input type="submit" value="Send Message">
             </form>
           </div>
