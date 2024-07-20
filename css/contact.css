@@ -19,11 +19,14 @@ textarea {
     resize: none;
     margin-bottom: 24px;
 }
+input[type="submit"] {
+    background-color: #82ae46;
+}
 .contact .row {
     width: 90%;
     height: 116px;
     background-color: #ffffff;
-    margin: 0px 20px 24px;
+    margin: 0px 20px 39px;
 }
 
 @media (max-width: 767px) {
@@ -39,5 +42,8 @@ textarea {
 }
 
 .get_in_touch {
-    background-color: #ccc;
+    background-color: #e8e8e8;
+}
+.contact i {
+    color: #82ae46;
 }

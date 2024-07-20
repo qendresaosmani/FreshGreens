@@ -50,6 +50,16 @@ document.addEventListener('DOMContentLoaded', function() {
         cell8.textContent = `€${(parseFloat(item.price) * 1.18).toFixed(2)}`;
         row.appendChild(cell8);
 
+        let cell9 = document.createElement('td');
+        let buyButton = document.createElement('button');
+        buyButton.textContent = 'BUY';
+        buyButton.classList.add('btn'); // Add any necessary classes for styling
+        buyButton.addEventListener('click', function() {
+            alert('Item added to cart!');
+        });
+        cell9.appendChild(buyButton);
+        row.appendChild(cell9);
+
         tbody.appendChild(row);
     });
 });
